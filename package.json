@@ -1,0 +1,30 @@
+{
+    "name": "something",
+    "version": "1.0.0",
+    "description": "description of something",
+    "main": "index.js",
+    "scripts": {
+        "prebuild": "rimraf ./build",
+        "dev": "npx nodemon",
+        "build": "npm run prebuild && npx tsc",
+        "start": "npm run build && node build/main",
+        "format": "npx eslint ./src --fix"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/node": "^20.11.16",
+        "prettier": "^3.2.5",
+        "rimraf": "^5.0.5",
+        "typescript": "^5.3.3"
+    },
+    "dependencies": {
+        "@prisma/client": "^5.20.0",
+        "@types/he": "^1.2.3",
+        "axios": "^1.7.7",
+        "dotenv": "^16.4.5",
+        "grammy": "^1.30.0",
+        "he": "^1.2.0",
+        "prisma": "^5.20.0"
+    }
+}
